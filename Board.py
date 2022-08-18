@@ -53,6 +53,15 @@ class Board:
 
         return ret
 
+    def get_square(self, x, y):
+        index = self.width * y + x
+        return self.board_values[index]
+
+
+
+
+
+        
     def flag(self, x, y):
         index = self.width * y + x
         if self.board_values[index]["status"] > 0:
@@ -111,6 +120,7 @@ class Board:
 
     def win(self):
         return self.number_of_mines <= 0 or self.number_of_safe_squares <= 0
+    
             
             
             
